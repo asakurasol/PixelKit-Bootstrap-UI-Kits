@@ -99,7 +99,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
     color:#8e8071;
-	font-size:13px;
+	font-size:16px;
 	position:relative;
     background: url(images/bg.png) center top repeat;
     background-size: 100% 100%;
@@ -697,6 +697,14 @@ p{
 }
 
 /*-----------------------------------*/
+/* Basic Information Table */
+/*-----------------------------------*/
+.basic-info-table{
+    display: inline-block;
+padding-top:25px;
+padding-bottom:25px;
+}
+/*-----------------------------------*/
 /* Rating Stars */
 /*-----------------------------------*/
 
@@ -721,6 +729,39 @@ p{
 .rating span.on,
 .rating span.star:hover,
 .rating span.over{background-image: url(images/icons/star_on.png); cursor:pointer;}
+/*-----------------------------------*/
+/* Accordian Stylings */
+/*-----------------------------------*/
+
+#accordion .panel-heading a {  
+    color: #fff;  
+    line-height: 28px;  
+    display: block;  
+    font-size: 14pt;  
+    width: 100%;  
+    text-indent: 10px;  
+}  
+
+#accordion .panel-heading {  
+    margin: 0px; 
+      background-color: #FBB247;  
+    background-image: -moz-linear-gradient(top,  #FBB247 0%, #dc621e 100%); /* FF3.6+ */  
+    background-image: -webkit-gradient(linear, left top, left bottombottom, color-stop(0%,#FBB247), color-stop(100%,#dc621e)); /* Chrome,Safari4+ */  
+    background-image: -webkit-linear-gradient(top,  #FBB247 0%,#dc621e 100%); /* Chrome10+,Safari5.1+ */  
+    background-image: -o-linear-gradient(top,  #FBB247 0%,#dc621e 100%); /* Opera 11.10+ */  
+    background-image: -ms-linear-gradient(top,  #FBB247 0%,#dc621e 100%); /* IE10+ */  
+    background-image: linear-gradient(to bottombottom,  #FBB247 0%,#dc621e 100%); /* W3C */  
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fa9300', endColorstr='#dc621e',GradientType=0 ); /* IE6-9 */  
+    border-right: 1px solid rgba(0, 0, 0, .2);  
+    border-left: 1px solid rgba(0, 0, 0, .2);  
+    border-bottom: 1px solid rgba(0, 0, 0, .2);  
+    border-top: 1px solid rgba(250, 250, 250, .2);  
+}  
+
+#accordion .panel-heading a {  
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.2);  
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.2);  
+}  
 
 /*===================================================*/
 /* 2. PAGE ITEMS, WIDGETS */
@@ -728,7 +769,9 @@ p{
 
 .content, .sidebar{padding: 50px 0;}
 #middle{position: relative; z-index: 0;}
+#middle.sidebar_left > .container > .row > .col-sm-4{float:left;}
 #middle.sidebar_left > .container > .row > .col-sm-8{float:right;}
+
 
 .boxed {
     background: #fff;
@@ -1671,9 +1714,27 @@ input[type="password"]:focus{
 .payment-form .tab-content {padding:0;}
 
 .tab-content h3{margin-bottom: 10px;}
-.tab-content h4{font-size: 19px; margin-bottom: 18px;}
+.tab-content h4{font-size: 14px; margin-bottom: 0px;}
 
 .tab-text{margin-bottom: 23px;}
+
+.tab_video.pull-left,
+.tab_video.pull-right{
+    width: 45%;
+}
+
+.tab_video{margin:0 0 12px 0;}
+.tab_video.pull-left{margin: 4px 16px 5px 0;}
+.tab_video.pull-right{margin:4px 0 5px 16px;}
+
+
+.tab_video video{
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    display: block;
+    width: 100%;
+}
 
 .tab_image.pull-left,
 .tab_image.pull-right{
